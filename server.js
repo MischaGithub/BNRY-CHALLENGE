@@ -7,6 +7,9 @@ const app = express();
 // Database Connection
 connectDB();
 
+// Init Middleware
+app.use(express.json({ extended: false}));
+
 // Route
 app.get("/", (req, res) => res.json({msg: "Infinite Image Slider API..."}));
 
