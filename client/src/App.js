@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './App.css';
+
+import Navbar from "./components/layout/Navbar";
 
 const App = () => {
   return (
-    <div className="App">
+    <Fragment>
+      <Navbar/>
+      <div className="container">
       Image Slider
-    </div>
+      </div>
+      
+    </Fragment>
   );
 }
 
