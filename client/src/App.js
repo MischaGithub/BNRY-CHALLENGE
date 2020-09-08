@@ -2,16 +2,20 @@ import React, {Fragment} from 'react';
 import './App.css';
 
 import Navbar from "./components/layout/Navbar";
+import SlideState from "./context/slide/SlideState";
 
 const App = () => {
   return (
-    <Fragment>
-      <Navbar/>
-      <div className="container">
-      Image Slider
-      </div>
+    <SlideState>
+       <Fragment>
+          <Navbar/>
+            <div className="container">
+              Image Slider
+             </div>
       
-    </Fragment>
+        </Fragment>
+    </SlideState>
+   
   );
 }
 

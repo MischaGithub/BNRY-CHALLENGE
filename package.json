@@ -4,12 +4,11 @@
   "description": "Infinite Image Slider",
   "main": "server.js",
   "scripts": {
-   "start": "node server.js",
-   "server": "nodemon server.js",
-   "client": "npm start --prefix client",
-   "clientinstall": "npm install --prefix client",
-   "dev": "concurrently \"npm run server\" \"npm run client\""
-   
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -18,7 +17,8 @@
     "config": "^3.3.1",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
-    "mongoose": "^5.10.3"
+    "mongoose": "^5.10.3",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
