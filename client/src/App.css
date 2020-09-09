@@ -4,7 +4,7 @@
 :root {
   --primary-color: #003699;
   --dark-color: #000;
-  --light-color: #f4f4f4;
+  --light-color:  #457fca;;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -19,7 +19,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background: #fff;  /* fallback for old browsers */
   color: #333;
 }
 
@@ -144,7 +144,7 @@ img {
 .btn-sm {
   font-size: 1rem;
   padding: 0.3rem 1rem;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
   background-color: #000;
   color: #fff;
   width: 100px;

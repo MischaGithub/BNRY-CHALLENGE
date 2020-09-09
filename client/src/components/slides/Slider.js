@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { Fragment, useRef, useEffect, useContext } from "react";
 import { Slide } from "react-slideshow-image";
 import ImageContext from "../../context/Images/imageContext";
 import SlideItem from "./SlideItem";
@@ -38,7 +38,8 @@ const Slider = ({ slide }) => {
 
  
   return (
-    <div> 
+      <Fragment>
+          <div > 
         {/*  If slides is not === null and not loading then show slides else show spinner */}
         {slides !== null && !loading ? (<div>
         <Slide ref={slideRef} {...properties}>
@@ -51,12 +52,15 @@ const Slider = ({ slide }) => {
       </div>) : <Spinner />}
       
 
-      <div className="autoplay-buttons">
-        <button className="btn-sm" type="button" onClick={previous}>Previous</button>
-        <button className="btn-sm"  type="button" onClick={next}>Next</button>
-      </div>
-    </div>
-  
+      
+        </div>
+        <div className="autoplay-buttons">
+            <button className="btn-sm" type="button" onClick={previous}>Previous</button>
+            <button className="btn-sm"  type="button" onClick={next}>Next</button>
+        </div>
+      </Fragment>
+    
+
   );
 };
 
