@@ -1,6 +1,6 @@
 import React from "react";
 
-const SlideItem = ({ slide}) => {
+const ImageItem = ({ slide}) => {
 
     // Pulling out the info needed
     const { id, image_url, name, description} = slide;
@@ -20,4 +20,4 @@ const SlideItem = ({ slide}) => {
     )
 }
 
-export default SlideItem;
+export default ImageItem;
