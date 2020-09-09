@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useContext } from "react";
 import { Slide } from "react-slideshow-image";
 import ImageContext from "../../context/Images/imageContext";
 import SlideItem from "./SlideItem";
+import Spinner from "../layout/Spinner";
 
 const Slider = ({ slide }) => {
 
@@ -39,7 +40,7 @@ const Slider = ({ slide }) => {
 
   return (
     <div> 
-      <div>
+        {slides !== null && !loading ? (<div>
         <Slide ref={slideRef} {...properties}>
             {slides.map(slide =>
                 <div>
@@ -47,7 +48,8 @@ const Slider = ({ slide }) => {
                 </div>
                 )}
         </Slide>
-      </div>
+      </div>) : <Spinner />}
+      
 
       <div className="autoplay-buttons">
         <button type="button" onClick={back}>Back</button>
