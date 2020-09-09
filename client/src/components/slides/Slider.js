@@ -3,6 +3,7 @@ import { Slide } from "react-slideshow-image";
 import ImageContext from "../../context/Images/imageContext";
 import SlideItem from "./SlideItem";
 import Spinner from "../layout/Spinner";
+import ReactTooltip from "react-tooltip";
 
 const Slider = ({ slide }) => {
 
@@ -11,6 +12,7 @@ const Slider = ({ slide }) => {
 
      // Pulling out the data with destructing
      const { slides, getSlide, loading } = imageContext;
+
  
      useEffect(() => {
          getSlide();
@@ -55,6 +57,19 @@ const Slider = ({ slide }) => {
       
         </div>
         <div className="autoplay-buttons">
+            <a data-for="soclose" data-tip={slideRef + 1}>?</a>
+            <ReactTooltip id="soclose" 
+                getContent={(dataTip) => 
+                <div><h3>The next slide is {dataTip}</h3></div>}
+                effect="solid"
+                delayHide={500}
+                delayShow={500}
+                delayUpdate={500}
+                place={"right"}
+                border={true}
+                type={"light"}
+                />
+           
             <button className="btn-sm" type="button" onClick={previous}>Previous</button>
             <button className="btn-sm"  type="button" onClick={next}>Next</button>
         </div>
