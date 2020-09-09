@@ -17,14 +17,12 @@ const Images = () => {
     }, []);
     
     return (
-        <Fragment>
             <div>
             {slides.map(slide => (
                 <SlideItem key={slide.id} slide={slide} />
 
             ))}
             </div>
-        </Fragment>
     )
 }
 

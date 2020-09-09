@@ -2,15 +2,20 @@ import React, {Fragment} from 'react';
 import './App.css';
 import Navbar from "./components/layout/Navbar";
 import ImageState from "./context/Images/ImageState";
-import Home from "./components/layout/Home";
+import Slider from "./components/Slides/Slider";
+import 'react-slideshow-image/dist/styles.css'
 
 const App = () => {
   return (
     <ImageState>
        <Fragment>
           <Navbar/>
-        
-              <Home />
+
+            <div className="container">
+              <div>
+              <Slider />
+              </div>
+            </div>
           
         </Fragment>
     </ImageState>

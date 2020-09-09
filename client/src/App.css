@@ -38,6 +38,9 @@ ul {
 
 img {
   width: 100%;
+  justify-content: left;
+  object-fit: cover;
+  height: 600px;
 }
 
 /* Utilities */

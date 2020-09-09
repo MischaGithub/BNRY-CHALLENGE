@@ -7,7 +7,7 @@ const ImageItem = ({ slide}) => {
     return(
         <div>
             <div className="card">
-              <img src={image_url} alt="img"/>
+              <img src={image_url} alt="img" />
               <div className="details">
                 <span className="index">{id}</span>
                 <p className="location">
