@@ -3,21 +3,21 @@ import React from "react";
 const ImageItem = ({ slide}) => {
 
     // Pulling out the info needed
-    const { id, image_url, name, description} = slide;
+    const { image_url, name, description} = slide;
     return(
         <div>
-            <div className="card">
+            <div className="container">
               <img src={image_url} alt="img" />
               <div className="details">
-                <span className="index">{id}</span>
                 <p className="location">
-                  {name}
+                  {name}</p>
+                <p className="location">
                   {description}</p>
               </div>
             </div>
           </div>
       
     )
-}
+};
 
 export default ImageItem;

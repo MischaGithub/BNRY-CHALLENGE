@@ -10,13 +10,7 @@ const App = () => {
     <ImageState>
        <Fragment>
           <Navbar/>
-
-            <div className="container">
-              <div>
-              <Slider />
-              </div>
-            </div>
-          
+              <Slider />  
         </Fragment>
     </ImageState>
    

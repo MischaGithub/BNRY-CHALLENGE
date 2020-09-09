@@ -18,7 +18,7 @@ const ImageState = props => {
     // Get Slides
     const getSlide =  async () => {
         try {
-            const res = await axios.get("api/images");
+            const res = await axios.get("/api/images");
 
             dispatch({
                 type: GET_SLIDE,

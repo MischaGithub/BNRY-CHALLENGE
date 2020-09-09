@@ -18,19 +18,17 @@ const Slider = ({ slide }) => {
      }, []);
   const slideRef = useRef();
 
-//   const style = {
-//     textAlign: "center",
-//     background: "teal",
-//     padding: "200px 0",
-//     fontSize: "30px"
-//   };
+  const style = {
+     textAlign: "center",
+   
+   };
 
   const properties = {
     autoplay: false,
     arrows: false
   };
 
-  const back = () => {
+  const previous = () => {
     slideRef.current.goBack();
   }
 
@@ -38,12 +36,14 @@ const Slider = ({ slide }) => {
     slideRef.current.goNext();
   }
 
+ 
   return (
     <div> 
+        {/*  If slides is not === null and not loading then show slides else show spinner */}
         {slides !== null && !loading ? (<div>
         <Slide ref={slideRef} {...properties}>
             {slides.map(slide =>
-                <div>
+                <div style={style} className="slide">
                     <SlideItem key={slide.id} slide={slide}/>
                 </div>
                 )}
@@ -52,8 +52,8 @@ const Slider = ({ slide }) => {
       
 
       <div className="autoplay-buttons">
-        <button type="button" onClick={back}>Back</button>
-        <button type="button" onClick={next}>Next</button>
+        <button className="btn-sm" type="button" onClick={previous}>Previous</button>
+        <button className="btn-sm"  type="button" onClick={next}>Next</button>
       </div>
     </div>
   
