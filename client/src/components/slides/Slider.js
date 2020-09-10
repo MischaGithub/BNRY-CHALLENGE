@@ -3,10 +3,10 @@ import { Slide } from "react-slideshow-image";
 import ImageContext from "../../context/Images/imageContext";
 import SlideItem from "./SlideItem";
 import Spinner from "../layout/Spinner";
-import { Button , UncontrolledTooltip } from "reactstrap";
+import { UncontrolledTooltip } from "reactstrap";
 
 
-const Slider = ({ slide, $ }) => {
+const Slider = () => {
 
      // Initalizing the context
      const imageContext = useContext(ImageContext);
@@ -33,11 +33,10 @@ const Slider = ({ slide, $ }) => {
 
   const properties = {
     autoplay: false,
-    indicators: false,
     arrows: false,
     onChange: (previous, next) => {
-      setPreviousIndex(previous -1);
-      setNextIndex(next + 1)
+      setPreviousIndex(previous);
+      setNextIndex(next)
     }
   };
 
@@ -49,12 +48,14 @@ const Slider = ({ slide, $ }) => {
     slideRef.current.goNext();
   }
 
-
-  return (
+  if(loading) {
+    return <Spinner />
+  } else {
+    return (
       <Fragment>
           <div > 
         {/*  If slides is not === null and not loading then show slides else show spinner */}
-        {slides !== null && !loading ? (
+
         <Slide ref={slideRef} {...properties} >
             {slides.map(slide =>
                 <div key={slideRef} style={style} className="slide">
@@ -62,48 +63,49 @@ const Slider = ({ slide, $ }) => {
                 </div>
                 )}
         </Slide>
-      ) : <Spinner />}
-      
 
-      
         </div>
-
         <div className="autoplay-buttons">
+          
+          {/* When the next button is click the tooltip will then update the state while in transition indicate which slide is next */}
+
           <div className="next-button">
       
             <button className="btn-sm"  type="button" onClick={next}>Next</button>
     
             <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample1" ></i></p>
             <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample1">
-              Next is slide {nextIndex}
+            Transitioned from {previousIndex} to {nextIndex}
 
             </UncontrolledTooltip>
-   
-
+  
           </div>
 
+          
           <div className="previous-button">
 
+            {/* When the previous button is click the tooltip will then update the state while in transition
+              will indicating from which slide was previous and which slide will be next*/}
 
           <button className="btn-sm" type="button" onClick={previous}>Previous</button>
 
           <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample2" ></i></p>
-          <UncontrolledTooltip style={{ width: "50px", height: "50px"}}placement="right" target="UncontrolledTooltipExample2">
-            Transitioned from  {nextIndex} to {previousIndex}
+
+          <UncontrolledTooltip style={{ width: "100px", height: "50px"}} placement="right" target="UncontrolledTooltipExample2">
+
+            Transitioned from {previousIndex} to {nextIndex}
 
           </UncontrolledTooltip>
-   
-
-
           </div>
 
         </div>
-        
-      
       </Fragment>
-    
 
   );
+  }
+
+
+  
 };
 
 export default Slider;

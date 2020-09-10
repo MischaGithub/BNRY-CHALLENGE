@@ -10,6 +10,7 @@ import axios from "axios";
 const ImageState = props => {
     const initialState = {
         slides: [],
+        loading: true,
         error: null
     };
 
@@ -41,6 +42,7 @@ const ImageState = props => {
         // Providing the values
         value={{
             slides: state.slides,
+            loading: state.loading,
             getSlide
 
         }}
