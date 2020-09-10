@@ -36,8 +36,8 @@ const Slider = ({ slide, $ }) => {
     indicators: false,
     arrows: false,
     onChange: (previous, next) => {
-      setPreviousIndex(previous);
-      setNextIndex(next + 2)
+      setPreviousIndex(previous -1);
+      setNextIndex(next + 1)
     }
   };
 
@@ -73,9 +73,9 @@ const Slider = ({ slide, $ }) => {
       
             <button className="btn-sm"  type="button" onClick={next}>Next</button>
     
-            <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample" ></i></p>
-            <UncontrolledTooltip style={{ width: "50px", height: "50px"}}placement="right" target="UncontrolledTooltipExample">
-              The next slide is {nextIndex}
+            <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample1" ></i></p>
+            <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample1">
+              Next is slide {nextIndex}
 
             </UncontrolledTooltip>
    
@@ -87,9 +87,9 @@ const Slider = ({ slide, $ }) => {
 
           <button className="btn-sm" type="button" onClick={previous}>Previous</button>
 
-          <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample" ></i></p>
-          <UncontrolledTooltip style={{ width: "50px", height: "50px"}}placement="right" target="UncontrolledTooltipExample">
-            The previous slide is {previousIndex}
+          <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample2" ></i></p>
+          <UncontrolledTooltip style={{ width: "50px", height: "50px"}}placement="right" target="UncontrolledTooltipExample2">
+            Transitioned from  {nextIndex} to {previousIndex}
 
           </UncontrolledTooltip>
    

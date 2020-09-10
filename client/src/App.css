@@ -138,7 +138,7 @@ img {
   display: flex;
   margin-top: 0.5rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .btn-sm {
@@ -147,6 +147,16 @@ img {
   margin-right: 0.8rem;
   background-color: #000;
   color: #fff;
+  width: 100px;
+}
+
+.next-button {
+  display: flex;
+  width: 100px;
+}
+
+.previous-button {
+  display: flex;
   width: 100px;
 }
 
