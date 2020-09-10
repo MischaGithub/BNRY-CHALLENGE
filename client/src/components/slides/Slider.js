@@ -74,9 +74,9 @@ const Slider = () => {
       
             <button className="btn-sm"  type="button" onClick={next}>Next</button>
     
-            <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample1" ></i></p>
+            <p ><i className="fas fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample1" ></i></p>
             <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample1">
-              Next slide {nextIndex}
+              Next slide {nextIndex + 1}
 
             </UncontrolledTooltip>
   
@@ -90,7 +90,7 @@ const Slider = () => {
 
           <button className="btn-sm" type="button" onClick={previous}>Previous</button>
 
-          <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample2" ></i></p>
+          <p ><i className="fas fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample2" ></i></p>
 
           <UncontrolledTooltip style={{ width: "100px", height: "50px"}} placement="right" target="UncontrolledTooltipExample2">
 
