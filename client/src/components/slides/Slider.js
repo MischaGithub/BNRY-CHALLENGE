@@ -31,8 +31,10 @@ const Slider = () => {
    };
 
   const properties = {
+    transitionDuration: 1500,
+    infinite: true,
     autoplay: false,
-    arrows: false,
+    arrows: true,
     onChange: (previous, next) => {
       setPreviousIndex(previous);
       setNextIndex(next)
@@ -51,7 +53,7 @@ const Slider = () => {
     return <Spinner />
   } else {
     return (
-      <Fragment>
+      <div className="slide-container">
           <div > 
         {/*  If slides is not === null and not loading then show slides else show spinner */}
 
@@ -98,7 +100,7 @@ const Slider = () => {
           </div>
 
         </div>
-      </Fragment>
+      </div>
 
   );
   }
