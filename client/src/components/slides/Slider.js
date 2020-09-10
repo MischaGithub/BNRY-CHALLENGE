@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useEffect, useContext , useState} from "react";
+import React, { useRef, useEffect, useContext , useState} from "react";
 import { Slide } from "react-slideshow-image";
 import SlideContext from "../../context/Slides/slideContext";
 import SlideItem from "./SlideItem";
