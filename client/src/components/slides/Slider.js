@@ -28,7 +28,6 @@ const Slider = () => {
 
   const style = {
      textAlign: "center",
-   
    };
 
   const properties = {
@@ -75,7 +74,7 @@ const Slider = () => {
     
             <p ><i className="fa fa-info" style={{textDecoration: "underline", color: "blue"}} href="#" id="UncontrolledTooltipExample1" ></i></p>
             <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample1">
-            Transitioned from {previousIndex} to {nextIndex}
+              Next slide {nextIndex}
 
             </UncontrolledTooltip>
   

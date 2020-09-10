@@ -6,7 +6,7 @@ const ImageItem = ({ slide}) => {
     const { image_url, name, description} = slide;
     return(
         <div>
-            <div className="container">
+         
               <img src={image_url} alt="img" />
               <div className="details">
                 <p className="location">
@@ -14,7 +14,7 @@ const ImageItem = ({ slide}) => {
                 <p className="location">
                   {description}</p>
               </div>
-            </div>
+           
           </div>
       
     )
