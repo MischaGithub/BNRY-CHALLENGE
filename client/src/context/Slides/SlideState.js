@@ -1,13 +1,13 @@
 import React, { useReducer } from "react";
-import ImageContext from "./imageContext";
-import imageReducer from "./imageReducer";
+import SlideContext from "./slideContext";
+import imageReducer from "./slideReducer";
 import {
     GET_SLIDE,
     SLIDE_ERROR
 } from "../types";
 import axios from "axios";
 
-const ImageState = props => {
+const SlideState = props => {
     const initialState = {
         slides: [],
         loading: true,
@@ -37,7 +37,7 @@ const ImageState = props => {
     // Slides Error
 
     return (
-        <ImageContext.Provider
+        <SlideContext.Provider
         
         // Providing the values
         value={{
@@ -48,8 +48,8 @@ const ImageState = props => {
         }}
         >
             { props.children }
-        </ImageContext.Provider>
+        </SlideContext.Provider>
     )
 };
 
-export default ImageState;
+export default SlideState;

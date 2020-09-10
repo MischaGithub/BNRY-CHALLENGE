@@ -1,18 +1,18 @@
 import React, {Fragment} from 'react';
 import './App.css';
 import Navbar from "./components/layout/Navbar";
-import ImageState from "./context/Images/ImageState";
+import SlideState from "./context/Slides/SlideState";
 import Slider from "./components/Slides/Slider";
 import 'react-slideshow-image/dist/styles.css'
 
 const App = () => {
   return (
-    <ImageState>
+    <SlideState>
        <Fragment>
           <Navbar/>
               <Slider />  
         </Fragment>
-    </ImageState>
+    </SlideState>
    
   );
 }

@@ -1,6 +1,6 @@
 import React, { Fragment, useRef, useEffect, useContext , useState} from "react";
 import { Slide } from "react-slideshow-image";
-import ImageContext from "../../context/Images/imageContext";
+import SlideContext from "../../context/Slides/slideContext";
 import SlideItem from "./SlideItem";
 import Spinner from "../layout/Spinner";
 import { UncontrolledTooltip } from "reactstrap";
@@ -9,7 +9,7 @@ import { UncontrolledTooltip } from "reactstrap";
 const Slider = () => {
 
      // Initalizing the context
-     const imageContext = useContext(ImageContext);
+     const imageContext = useContext(SlideContext);
 
      // Pulling out the data with destructing
      const { slides, getSlide, loading } = imageContext;
